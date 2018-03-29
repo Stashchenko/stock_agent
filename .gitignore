@@ -1,3 +1,11 @@
+/.bundle/
+/coverage/
+/spec/reports/
+/tmp/
+.envrc
+
+# rspec failure tracking
+.rspec_status
 *.gem
 *.rbc
 /.config

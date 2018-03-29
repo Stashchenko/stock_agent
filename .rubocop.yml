@@ -1,0 +1,10 @@
+AllCops:
+  Include:
+    - Rakefile
+  Exclude:
+    - bin/**
+    - Gemfile
+Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false

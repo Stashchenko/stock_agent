@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+if [[ ! -a .envrc ]]; then
+  cp .envrc.sample .envrc
+fi
+echo 'Stock agent setup - Done!'
