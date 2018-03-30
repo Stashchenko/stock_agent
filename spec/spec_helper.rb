@@ -1,10 +1,13 @@
 require 'webmock/rspec'
 require 'simplecov'
 require 'active_support'
+require 'active_support/core_ext'
 
 SimpleCov.start do
   add_filter %r{^/spec/}
 end
+
+Dir[File.join(File.expand_path(Dir.pwd), 'lib/**/', '*.rb')].each { |file| require_relative file }
 
 ENV['QUANDL_API_KEY'] = 'valid_api_key'
 

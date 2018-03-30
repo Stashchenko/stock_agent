@@ -1,7 +1,5 @@
 require 'net/http'
-require_relative '../../../lib/quandl/response'
-
-RSpec.describe StockAgent::Quandl::Response do
+RSpec.describe StockAgent::Response do
   let(:net_http_response) { Net::HTTP.get_response(request_url) }
   let(:request_url) { URI('https://www.quandl.com/api/v3/datatables/WIKI/PRICES?api_key=valid_api_key&date=2018-01-02&ticker=AAPL') }
   let(:dummy_body) { File.new('spec/fixtures/aapl_2018-01-02.json') }
@@ -20,7 +18,7 @@ RSpec.describe StockAgent::Quandl::Response do
   after { WebMock.reset! }
 
   describe 'Get raw data' do
-    subject { StockAgent::Quandl::Response.new(net_http_response).data }
+    subject { StockAgent::Response.new(net_http_response).data }
 
     it 'with valid Net::HTTP response and single data' do
       expect(subject).to be_instance_of(Array)
