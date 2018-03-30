@@ -1,0 +1,83 @@
+{
+  "datatable": {
+    "data": [
+      [
+        "AAPL",
+        "2018-01-02",
+        173.36,
+        175.0,
+        173.05,
+        174.96,
+        24997274.0,
+        0.0,
+        1.0,
+        173.36,
+        175.0,
+        173.05,
+        174.96,
+        24997274.0
+      ]
+    ],
+    "columns": [
+      {
+        "name": "stock_name",
+        "type": "String"
+      },
+      {
+        "name": "date",
+        "type": "Date"
+      },
+      {
+        "name": "open",
+        "type": "BigDecimal(34,12)"
+      },
+      {
+        "name": "high",
+        "type": "BigDecimal(34,12)"
+      },
+      {
+        "name": "low",
+        "type": "BigDecimal(34,12)"
+      },
+      {
+        "name": "close",
+        "type": "BigDecimal(34,12)"
+      },
+      {
+        "name": "volume",
+        "type": "BigDecimal(37,15)"
+      },
+      {
+        "name": "ex-dividend",
+        "type": "BigDecimal(42,20)"
+      },
+      {
+        "name": "split_ratio",
+        "type": "double"
+      },
+      {
+        "name": "adj_open",
+        "type": "BigDecimal(50,28)"
+      },
+      {
+        "name": "adj_high",
+        "type": "BigDecimal(50,28)"
+      },
+      {
+        "name": "adj_low",
+        "type": "BigDecimal(50,28)"
+      },
+      {
+        "name": "adj_close",
+        "type": "BigDecimal(50,28)"
+      },
+      {
+        "name": "adj_volume",
+        "type": "double"
+      }
+    ]
+  },
+  "meta": {
+    "next_cursor_id": null
+  }
+}

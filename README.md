@@ -1,9 +1,9 @@
 # StockAgent
 
 Enter stock name, start date or range of date.
-    - return the stock prices
-    - the stock has generated
-    - maximum drawdown
+ * return the stock prices
+ * Calculate the return the stock has generated since the start date to today
+ * The maximum drawdown of the stock within that time frame.
 
 ## Installation
 

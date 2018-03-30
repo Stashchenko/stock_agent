@@ -1,4 +1,6 @@
-# frozen_string_literal: true
+require 'net/http'
+require 'date'
+require 'active_support/core_ext'
 
 require_relative 'app/client'
 

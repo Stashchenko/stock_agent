@@ -8,3 +8,27 @@ Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 20
+Metrics/BlockLength:
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'spec/**/*.rb'
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'spec/**/*.rb'
+Metrics/MethodLength:
+  Max: 120
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'spec/**/*.rb'
+
+
+
