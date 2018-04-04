@@ -3,23 +3,12 @@ require 'slack-notifier'
 module StockAgent
   class Slack
     extend NotifyNormalizer
+    SLACK_NOTIFIER = ::Slack::Notifier.new(StockAgent::Lib::Config.slack_url)
 
     class << self
       def notify(text)
-        new.send(:notify, normalize_input(text))
+        SLACK_NOTIFIER.post({text: normalize_input(text), channel: nil}.compact)
       end
-    end
-
-    private
-
-    attr_reader :slack_notifier
-
-    def initialize
-      @slack_notifier = ::Slack::Notifier.new(StockAgent::Lib::Config.slack_url)
-    end
-
-    def notify(text)
-      @slack_notifier.post({ text: text, channel: nil }.compact)
     end
   end
 end

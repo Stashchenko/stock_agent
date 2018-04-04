@@ -53,6 +53,7 @@ module StockAgent
     end
 
     def price_datas
+      raise 'Please specify data adapter for StockHandler' if @resolver.adapter.blank?
       @price_datas ||= @resolver.stock_data(@stock_symbol, @start_date, @end_date).data
     end
 
