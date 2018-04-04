@@ -29,6 +29,7 @@ module StockAgent
 
     def render_drawdowns
       print @drawdowns_out if @drawdowns_out.present?
+      @drawdowns_out = []
     end
 
     def render_max_drawdown(max_drawdown, p_data)
