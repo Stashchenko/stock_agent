@@ -2,10 +2,6 @@ module StockAgent
   class StockResolver
     attr_accessor :adapter, :start_date, :end_date
 
-    def initialize(adapter)
-      @adapter = adapter
-    end
-
     def stock_data(stock_symbol, start_date, end_date)
       validate_dates(start_date, end_date)
       @adapter.response(stock_symbol, @start_date, @end_date)

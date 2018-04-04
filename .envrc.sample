@@ -1,1 +1,2 @@
 export QUANDL_API_KEY=your_QUANDL_api_key
+export SLACK_WEBHOOK_URL=you_slack_url

@@ -8,3 +8,4 @@ gem 'rspec', '~> 3.0'
 gem 'webmock'
 gem 'simplecov'
 gem 'rubocop', '~> 0.54.0', require: false
+gem 'slack-notifier'
