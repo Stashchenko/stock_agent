@@ -17,7 +17,8 @@ module StockAgent
     end
 
     def call
-      @actions.each {|a| a.call(price_datas)}
+      @actions.each { |a| a.call(price_datas) }
+      @renderer.show_final_result
     end
 
     private
@@ -30,6 +31,5 @@ module StockAgent
     def allowed_actions
       [AllStockAction, DrawdownRangeAction, MaxDrawdownAction, ReturnAction]
     end
-
   end
 end
