@@ -23,11 +23,11 @@ module StockAgent
 
     def render_return_rate(price_first, price_last, result)
       @out_buffer << "\n\rReturn: #{price_last[:close] - price_first[:close]} [#{result}%] (#{price_first[:close]}"
-      @out_buffer << " on #{price_first[:date]} -> #{price_last[:close]} on #{price_last[:date]})\n\r"
+      @out_buffer << "on #{price_first[:date]} -> #{price_last[:close]} on #{price_last[:date]})\n\r"
     end
 
     def prepare_drawdowns
-      @out_buffer << "\n\rDrawdowns by date:\n\r"
+      @out_buffer << "\n\rDrawdowns: by date:\n\r"
     end
 
     def render_max_drawdown(max_drawdown, p_data)
@@ -36,7 +36,9 @@ module StockAgent
     end
 
     def build_drawdown(drawdown, p_data)
-      @out_buffer << "#{drawdown}% (#{p_data[:high]} on #{p_data[:date]} -> #{p_data[:low]} on #{p_data[:date]})\n\r"
+      str = "#{drawdown}% (#{p_data.first[:high]} on #{p_data.first[:date]}"
+      str += "-> #{p_data.last[:low]} on #{p_data.last[:date]})\n\r"
+      @out_buffer << str
     end
   end
 end

@@ -44,7 +44,7 @@ You can use [direnv](https://direnv.net/) as well in order to config ENV variabl
  $ bundle exec rspec
 ```
 
-##TODO
+## TODO
  * Coverage for all classes   
  * response.rb should have abstract class with clear structure response in order to provide adapters compatibility 
  * renderer.rb may be split by 2 classes, notifiers responsibility might be in lowest level  
