@@ -2,9 +2,10 @@ module StockAgent
   class DrawdownRangeAction < AbstractAction
     def call(data)
       @renderer.prepare_drawdowns
-      data.each do |p_data|
-        result = StockAgent::Metrics::MaxDrawdown.calculate([p_data[:high], p_data[:low]])
-        @renderer.build_drawdown(to_percent(result[:drawdown]), p_data)
+      peaks = StockAgent::Metrics::MaxDrawdown.peak_values(data)
+      peaks.each do |peak|
+        result = StockAgent::Metrics::MaxDrawdown.calculate(peak)
+        @renderer.build_drawdown(to_percent(result[:drawdown]), result[:range_min_max])
       end
     end
   end
